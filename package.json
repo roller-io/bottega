@@ -1,0 +1,52 @@
+{
+  "name": "bottega",
+  "version": "1.0.0",
+  "description": "Bottega is the CSS toolkit that provides all the front-end design elements for Roller.io.",
+  "main": "css/bottega.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roller-io/bottega.git"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "roller",
+    "css",
+    "bottega",
+    "bottegacss"
+  ],
+  "author": "Hecham Ghazal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roller-io/bottega/issues"
+  },
+  "homepage": "https://github.com/roller-io/bottega#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "del": "^2.2.0",
+    "font-awesome": "^4.5.0",
+    "glob": "^5.0.14",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cache": "^0.4.1",
+    "gulp-copy": "0.0.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "^1.0.2",
+    "gulp-using": "^0.1.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "gulp-webserver": "^0.9.1",
+    "material-design-icons-iconfont": "^2.0.4",
+    "minimist": "^1.2.0",
+    "octicons": "^3.4.1",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
+  }
+}

@@ -1,0 +1,32 @@
+@import "fonts/font-awesome";
+@import "fonts/font-material";
+@import "fonts/font-octicons";
+@import "fonts/font-abezeh";
+
+.bt-icon {
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  line-height: $fonts-line-height-base;
+  vertical-align: text-top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+}
+
+.bt-icon.material {
+  font-family: 'Material Icons';
+
+}
+
+.bt-icon.octicon {
+  font-family: 'octicons';
+}
+
+.bt-icon.fa {
+  font-family: 'FontAwesome';
+}
