@@ -45,31 +45,33 @@ gulp.task('develop', function(cb) {
     [
       'generate-dev-css',
       // 'cp-images',
-      'cp-fonts',
       // 'cp-scripts',
     ],
     'compile-jekyll:localhost',
+    'cp-doc-fonts',
+    'cp-styles-docs',
     'start-server',
     'dev-watch-tasks',
     cb);
 });
 
-gulp.task('develop:prod', function(cb) {
+gulp.task('publish', function(cb) {
   runSequence(
     'clean',
-    'tests',
+    // 'tests',
     [
       'generate-prod-css',
-      'minify-images',
-      'cp-fonts',
-      'cp-scripts',
+      // 'minify-images',
+      // 'cp-scripts',
     ],
-    // 'compile-jekyll:prod',
-    [
-      'html',
-      'minify-images:content'
-    ],
-    'start-server',
+    'compile-jekyll:prod',
+    // [
+    //   'html',
+    //   'minify-images:content'
+    // ],
+    'cp-doc-fonts',
+    'cp-styles-docs',
+    'publish-gh-pages',
     cb);
 });
 

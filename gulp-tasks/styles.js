@@ -64,6 +64,12 @@ gulp.task('generate-dev-css', function(cb) {
     cb);
 });
 
+
+gulp.task('cp-styles-docs', [], function() {
+  return gulp.src([GLOBAL.bottega.build.styles + '/**/*'])
+    .pipe(gulp.dest(GLOBAL.bottega.build.docs + '/styles/'));//, {prefix: 3}));
+});
+
 // generate-prod-css is the same as generate-dev-css
 // except it minifies and optimises the CSS and
 // skips generating the sourcemaps which account for

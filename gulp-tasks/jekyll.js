@@ -6,10 +6,6 @@ var spawn = require('child_process').spawn;
 var runSequence = require('run-sequence');
 var plugins = require('gulp-load-plugins')();
 
-gulp.task('rm-jekyll-build-directory', function() {
-  return del([GLOBAL.bottega.build.docs], {dot: true});
-});
-
 /**
  * There is a gotcha with this command!
  *
@@ -38,22 +34,14 @@ function spawnkJekyllBuild(jekyllCommand, buildConfig, cb) {
   jekyllProcess.on('close', cb);
 }
 
-// jekyll:target [--lang <lang_code,lang_code,...|all>]
-// where 'target' is config/target.yml file.
-// defaults to '--lang all'.
-// 'all' builds for all languages specified in config.yml/langs_available + 'en'.
-// builds w/o multilang support if config.yml is missing langs_available.
-gulp.task('compile-jekyll:localhost', ['rm-jekyll-build-directory'],
-  function(cb) {
+gulp.task('rm-jekyll-build-directory', function() {
+  return del([GLOBAL.bottega.build.docs], {dot: true});
+});
+
+gulp.task('compile-jekyll:localhost', ['rm-jekyll-build-directory'], function(cb) {
     spawnkJekyllBuild('build', 'localhost.yml', cb);
-  });
+});
 
-gulp.task('compile-jekyll:prod', ['rm-jekyll-build-directory'],
-  function(cb) {
-    spawnkJekyllBuild('build', 'staging.yml', cb);
-  });
-
-gulp.task('compile-jekyll:devsite', ['rm-jekyll-build-directory'],
-  function(cb) {
-    spawnkJekyllBuild('build', 'devsite.yml', cb);
-  });
+gulp.task('compile-jekyll:prod', ['rm-jekyll-build-directory'], function(cb) {
+    spawnkJekyllBuild('build', 'production.yml', cb);
+});
