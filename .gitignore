@@ -33,6 +33,7 @@ cover
 .ipython
 build
 gunicorn.pid
+.publish/
 
 */bower_components
 */node_modules
